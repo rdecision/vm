@@ -4,7 +4,11 @@ Chunk::Chunk() = default;
 
 void Chunk::writeChunk(const std::uint8_t byte, std::uint64_t line) {
     code.push_back(byte);
-    lines.push_back(line);
+    if (!lineRuns.empty() && lineRuns.back().first == line) {
+        lineRuns.back().second++;
+        return;
+    }
+    lineRuns.emplace_back(line, 1);
 }
 
 std::uint8_t Chunk::readChunk(size_t index) const {
@@ -25,7 +29,19 @@ size_t Chunk::addConstant(const Value value) {
 }
 
 std::uint64_t Chunk::getLine(size_t index) const {
-    return lines.at(index);
+    std::uint64_t count = 0;
+
+    for (auto const & lineRun: lineRuns) {
+        count += lineRun.second;
+        if (index < count) {
+            return lineRun.first;
+        }
+    }
+    return -1;
+}
+
+const uint8_t* Chunk::getCode() const {
+    return code.data();
 }
 
 

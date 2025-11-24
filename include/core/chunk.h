@@ -4,18 +4,25 @@
 #include <vector>
 #include "core/value.h"
 #include <cstdint>
+#include <utility>
 
 using std::vector;
 
 enum OpCode {
     OP_CONSTANT,
+    OP_ADD,
+    OP_SUBTRACT,
+    OP_MULTIPLY,
+    OP_DIVIDE,
+    OP_NEGATE,
     OP_RETURN,
 };
 
 class Chunk {
     vector<std::uint8_t> code;
     vector<Value> values;
-    vector<std::uint64_t> lines; // need to change to run length encoding
+    vector<std::uint64_t> lines;
+    vector<std::pair<uint64_t, uint64_t>> lineRuns;
 
 public:
     Chunk();
@@ -25,6 +32,7 @@ public:
     [[nodiscard]] size_t getChunkSize() const;
     [[nodiscard]] std::uint64_t getLine(size_t index) const;
     size_t addConstant(Value value);
+    [[nodiscard]] const std::uint8_t* getCode() const;
 };
 
 
