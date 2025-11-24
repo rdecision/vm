@@ -40,7 +40,7 @@ InterpretResult VirtualMachine::run() {
             }
             case OP_NEGATE: {
                 push(-pop()); break;
-            } /// TODO: are templates faster fo
+            } /// TODO: are templates faster for bi
             case OP_ADD: {
                 double a = pop();
                 double b = pop();
