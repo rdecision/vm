@@ -40,26 +40,30 @@ InterpretResult VirtualMachine::run() {
             }
             case OP_NEGATE: {
                 push(-pop()); break;
-            } /// TODO: are templates faster for bi
+            }
             case OP_ADD: {
                 double a = pop();
                 double b = pop();
                 push (a + b);
+                break;
             }
             case OP_SUBTRACT: {
                 double a = pop();
                 double b = pop();
                 push (a - b);
+                break;
             }
             case OP_MULTIPLY: {
                 double a = pop();
                 double b = pop();
                 push (a * b);
+                break;
             }
             case OP_DIVIDE: {
                 double a = pop();
                 double b = pop();
                 push (a / b);
+                break;
             }
 
         }

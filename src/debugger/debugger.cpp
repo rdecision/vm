@@ -26,6 +26,14 @@ namespace debugger {
                 return simpleInstruction("OP_RETURN", offset);
             case OP_CONSTANT:
                 return constantInstruction("OP_CONSTANT", chunk, offset);
+            case OP_ADD:
+                return simpleInstruction("OP_ADD", offset);
+            case OP_SUBTRACT:
+                return simpleInstruction("OP_SUBTRACT", offset);
+            case OP_MULTIPLY:
+                return simpleInstruction("OP_MULTIPLY", offset);
+            case OP_DIVIDE:
+                return simpleInstruction("OP_DIVIDE", offset);
             default:
                 std::cout << "Unknown instruction" << std::endl;
                 return offset + 1;
