@@ -1,17 +1,34 @@
 #include "core/VirtualMachine.h"
 #include <iostream>
+#include <fstream>
 #ifdef DEBUG_TRACE_EXECUTION
 #include "debugger/debugger.h"
 #endif
 
 
-VirtualMachine::VirtualMachine(const Chunk& chunk) : currentChunk(chunk), ip(chunk.getCode()) {
+VirtualMachine::VirtualMachine(Chunk& chunk) : currentChunk(chunk), ip(chunk.getCode()) {
     stackTop = stack.data();
 }
 
-InterpretResult VirtualMachine::interpret() {
+void VirtualMachine::repl() {
+    std::string line;
+    while (true) {
+        std::cout << "> ";
+
+        if (!std::getline(std::cin, line)) {
+            if (std::cin.eof()) {break;}
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+    }
+
+    interpret(line);
+}
+
+InterpretResult VirtualMachine::interpret(std::string_view s) {
     return run();
 }
+
 
 /// TODO: investigate direct threaded code, jump table or computed goto
 InterpretResult VirtualMachine::run() {
