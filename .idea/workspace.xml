@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackendCodeEditorMiscSettings">
-    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="5" type="long" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="247" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
@@ -20,6 +20,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="vm" targetName="interpreter" />
       <config projectName="vm" targetName="gtest" />
       <config projectName="vm" targetName="gmock_main" />
       <config projectName="vm" targetName="core" />
@@ -27,22 +28,43 @@
       <config projectName="vm" targetName="debugger" />
       <config projectName="vm" targetName="gmock" />
       <config projectName="vm" targetName="vm" />
+      <config projectName="vm" targetName="frontend" />
       <config projectName="vm" targetName="gtest_main" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
-      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+      <configuration PROFILE_NAME="Debug-WSL" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="WSL" GENERATION_OPTIONS="-G Ninja" />
+      <configuration PROFILE_NAME="Release-WSL" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="WSL" GENERATION_OPTIONS="-G Ninja" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf77bb14-bfe3-4f03-b2f9-36eb78c5d9f1" name="Changes" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/src/core/VirtualMachine.cpp" afterDir="false" />
+    <list default="true" id="cf77bb14-bfe3-4f03-b2f9-36eb78c5d9f1" name="Changes" comment="added more frontend components">
+      <change afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/include/interpreter/interpreter.h" afterDir="false" />
+      <change afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/interpreter/CMakeLists.txt" afterDir="false" />
+      <change afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/interpreter/interpreter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/interpreter/interpreter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interpreter/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interpreter/interpreter.cpp" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/.idea/editor.xml" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/.idea/editor.xml" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/.idea/vcs.xml" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/.idea/workspace.xml" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/CMakeLists.txt" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/CMakeLists.txt" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/include/core/VirtualMachine.h" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/include/core/VirtualMachine.h" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/include/frontend/file_io.h" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/include/frontend/file_io.h" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/core/CMakeLists.txt" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/core/CMakeLists.txt" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/frontend/CMakeLists.txt" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/frontend/CMakeLists.txt" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/frontend/file_io.cpp" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/frontend/file_io.cpp" afterDir="false" />
+      <change beforePath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/main.cpp" beforeDir="false" afterPath="//wsl$/Ubuntu-22.04/home/hamza/vm/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/core/chunk.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/core/chunk.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/core/VirtualMachine.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/core/VirtualMachine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/frontend/file_io.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/frontend/file_io.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/chunk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/chunk.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/file_io.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/file_io.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +75,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-WSL" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -63,6 +85,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -70,12 +93,12 @@
     &quot;assignee&quot;: &quot;rdecision&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/rdecision/vm&quot;,
-    &quot;accountId&quot;: &quot;674f3639-e806-4121-a68c-845c70c1940d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rdecision/vm.git",
+    "accountId": "b53d8e8b-7da5-4a97-98c1-d13a8fe4fed1"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -236,7 +259,8 @@
     &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/hamza/craftinginterpreters&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/hamza/vm&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -292,13 +316,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\hamza\vm\src\interpreter" />
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\hamza\vm\include\interpeter" />
       <recent name="$PROJECT_DIR$/include/core" />
       <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/src/debug" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.vm">
-    <configuration name="vm_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="vm_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="vm" RUN_TARGET_NAME="vm_tests" TEST_MODE="SUITE_TEST">
+    <configuration name="vm_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="vm_tests" CONFIG_NAME="Debug-WSL" RUN_TARGET_PROJECT_NAME="vm" RUN_TARGET_NAME="vm_tests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -309,37 +335,47 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="core" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="core" CONFIG_NAME="Debug">
+    <configuration name="core" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="core" CONFIG_NAME="Debug-WSL">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="debugger" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="debugger" CONFIG_NAME="Debug">
+    <configuration name="debugger" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="debugger" CONFIG_NAME="Debug-WSL">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+    <configuration name="frontend" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="frontend" CONFIG_NAME="Debug-WSL">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gmock" CONFIG_NAME="Debug-WSL">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gmock_main" CONFIG_NAME="Debug-WSL">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gtest" CONFIG_NAME="Debug-WSL">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="vm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="vm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="vm" RUN_TARGET_NAME="vm">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="gtest_main" CONFIG_NAME="Debug-WSL">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="interpreter" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="interpreter" CONFIG_NAME="Debug-WSL">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vm" TARGET_NAME="vm" CONFIG_NAME="Debug-WSL" RUN_TARGET_PROJECT_NAME="vm" RUN_TARGET_NAME="vm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -347,6 +383,8 @@
     <list>
       <item itemvalue="CMake Application.core" />
       <item itemvalue="CMake Application.debugger" />
+      <item itemvalue="CMake Application.frontend" />
+      <item itemvalue="CMake Application.interpreter" />
       <item itemvalue="CMake Application.vm" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
@@ -370,6 +408,8 @@
       <workItem from="1764008658628" duration="2222000" />
       <workItem from="1764010905358" duration="10000" />
       <workItem from="1764011199631" duration="1501000" />
+      <workItem from="1765804236156" duration="127000" />
+      <workItem from="1765804367045" duration="6770000" />
     </task>
     <task id="LOCAL-00001" summary="initial project setup">
       <option name="closed" value="true" />
@@ -401,7 +441,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial project setup" />
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="added more frontend components" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more frontend components" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

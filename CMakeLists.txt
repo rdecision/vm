@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectory(src/core)
 add_subdirectory(src/frontend)
 add_subdirectory(src/debugger)
+add_subdirectory(src/interpreter)
 add_subdirectory(test)
 
 add_executable(vm src/main.cpp)
