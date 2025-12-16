@@ -1,4 +1,4 @@
-#include "core/VirtualMachine.h"
+#include "core/virtualmachine.h"
 #include <iostream>
 #include <fstream>
 #ifdef DEBUG_TRACE_EXECUTION
@@ -6,11 +6,11 @@
 #endif
 
 
-VirtualMachine::VirtualMachine(Chunk& chunk) : currentChunk(chunk), ip(chunk.getCode()) {
+virtualmachine::virtualmachine(Chunk& chunk) : currentChunk(chunk), ip(chunk.getCode()) {
     stackTop = stack.data();
 }
 
-void VirtualMachine::repl() {
+void virtualmachine::repl() {
     std::string line;
     while (true) {
         std::cout << "> ";
@@ -25,13 +25,13 @@ void VirtualMachine::repl() {
     interpret(line);
 }
 
-InterpretResult VirtualMachine::interpret(std::string_view s) {
+InterpretResult virtualmachine::interpret(std::string_view s) {
     return run();
 }
 
 
 /// TODO: investigate direct threaded code, jump table or computed goto
-InterpretResult VirtualMachine::run() {
+InterpretResult virtualmachine::run() {
     for (;;) {
 #ifdef DEBUG_TRACE_EXECUTION
         printf("          ");

@@ -6,7 +6,7 @@
 
 namespace file_io {
     void runFile(const std::filesystem::path& path);
-    std::string loadFile(const std::filesystem::path& path);
+    std::string readFile(const std::filesystem::path& path);
 }
 
 #endif //VM_FILE_IO_H

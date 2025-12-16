@@ -1,5 +1,5 @@
 #include "core/chunk.h"
-#include "core/VirtualMachine.h"
+#include "core/virtualmachine.h"
 #include "debugger/debugger.h"
 #include <iostream>
 
@@ -7,7 +7,7 @@
 
 int main(int argc, const char* argv[]) {
     Chunk chunk;
-    auto vm = VirtualMachine(chunk);
+    auto vm = virtualmachine(chunk);
     if (argc == 1) {
         vm.repl();
     } else if (argc == 2) {

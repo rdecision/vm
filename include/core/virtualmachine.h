@@ -10,7 +10,7 @@
 
 constexpr int STACK_SIZE = 1024;
 
-class VirtualMachine {
+class virtualmachine {
     const Chunk& currentChunk; // can we guarantee that chunk outlives vm?
     const uint8_t* ip{}; /// TODO: check if vector indexing is faster?
     std::array<Value, STACK_SIZE> stack {}; /// TODO check if just using vector reduces binary size
@@ -22,9 +22,9 @@ class VirtualMachine {
 public:
     [[nodiscard]] Value pop() noexcept {stackTop--; return *stackTop;}
     void push(Value value) noexcept {*stackTop = value; stackTop++;}
-    VirtualMachine(Chunk& chunk);
-    VirtualMachine(const Chunk&&) = delete;
-    VirtualMachine(Chunk&&) = delete;
+    virtualmachine(Chunk& chunk);
+    virtualmachine(const Chunk&&) = delete;
+    virtualmachine(Chunk&&) = delete;
     void repl();
 
 

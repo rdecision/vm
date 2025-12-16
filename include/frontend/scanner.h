@@ -11,6 +11,8 @@ class Scanner {
     size_t current = 0;
     const std::string_view source;
 
+    bool isAtEnd() const {return current == source.size() - 1;}
+    char advance();
     Token scanToken();
 public:
     Scanner(std::string_view source);

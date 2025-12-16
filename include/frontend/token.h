@@ -2,6 +2,8 @@
 #define VM_TOKEN_H
 
 #include <cstddef>
+#include <optional>
+#include <string>
 
 enum class TokenType {
     // Single-character tokens.
@@ -22,7 +24,7 @@ enum class TokenType {
     PRINT, RETURN, SUPER, THIS,
     TRUE, VAR, WHILE,
 
-    ERROR, EOF
+    ERROR, END_OF_FILE
   };
 
 struct Token {
@@ -30,8 +32,14 @@ struct Token {
     size_t start;
     size_t length;
     size_t line;
+    std::optional<std::string> error_msg = std::nullopt;
 
+    Token(const TokenType type, const size_t start, const size_t length, const size_t line) :
+    type(type), start(start), length(length), line(line) {}
 
+    errorToken(const size_t line, const std::string& error_msg) {
+        return Token(TokenType::ERROR, )
+    }
 };
 
 
